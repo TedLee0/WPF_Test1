@@ -111,6 +111,19 @@
                                             </Setter.Value>
                                         </Setter>
                                     </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border" Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                    <GradientStop Color="Red" Offset="0.0"/>
+                                                    <GradientStop Color="DarkOrange" Offset="1.0"/>
+                                                </LinearGradientBrush>
+                                               
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                                        <Setter TargetName="border" Property="BorderBrush" Value="DarkOrange"/>
+                                    </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
@@ -124,7 +137,7 @@
                     <TextBlock>50</TextBlock>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="空间" Height="23.2" VerticalAlignment="Top">
+            <TabItem Header="空间" Margin="-2,-2,0,2">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <TextBlock>123</TextBlock>
                 </ScrollViewer>
